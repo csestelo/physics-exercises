@@ -29,19 +29,17 @@ class VectorTests(TestCase):
         self.assertAlmostEqual(30, angle)
 
     def test_two_vectors_sum(self):
-        vec = Vector.two_vectors_sum(ax=3, ay=2, bx=2, by=3)
+        sum_result = Vector(ax=3, ay=2).two_vectors_sum(bx=2, by=3)
 
-        self.assertEqual(5, vec.ax)
-        self.assertEqual(5, vec.ay)
+        self.assertEqual((5, 5), sum_result)
 
     def test_two_vectors_sub(self):
-        vec = Vector.two_vectors_sub(ax=3, ay=2, bx=2, by=3)
+        sub_result = Vector(ax=3, ay=2).two_vectors_sub(bx=2, by=3)
 
-        self.assertEqual(1, vec.ax)
-        self.assertEqual(-1, vec.ay)
+        self.assertEqual((1, -1), sub_result)
 
     def test_multiplication_with_a_scalar(self):
-        vec = Vector.multiplication_with_a_scalar(times=4.0, ax=3.0, ay=-2.0)
+        vec = Vector(ax=3.0, ay=-2.0)
+        mult_result = vec.multiplication_with_a_scalar(times=4.0)
 
-        self.assertEqual(12, vec.ax)
-        self.assertEqual(-8, vec.ay)
+        self.assertEqual((12, -8), mult_result)

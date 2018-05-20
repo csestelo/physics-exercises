@@ -22,24 +22,21 @@ class Vector:
         ay = sin(radians(angle)) * magnitude
         return cls(ax, ay)
 
-    @classmethod
-    def two_vectors_sum(cls, ax: float, ay: float, bx: float, by: float):
-        cx = ax + bx
-        cy = ay + by
+    def two_vectors_sum(self, bx: float, by: float):
+        cx = self.ax + bx
+        cy = self.ay + by
 
-        return cls(cx, cy)
+        return cx, cy
 
-    @classmethod
-    def two_vectors_sub(cls, ax: float, ay: float, bx: float, by: float):
-        cx = ax + -bx
-        cy = ay + -by
+    def two_vectors_sub(self, bx: float, by: float):
+        cx = self.ax + -bx
+        cy = self.ay + -by
 
-        return cls(cx, cy)
+        return cx, cy
 
-    @classmethod
-    def multiplication_with_a_scalar(cls, times: float, ax: float, ay: float):
-        ax, ay = (times * ax, times * ay)
-        return cls(ax, ay)
+    def multiplication_with_a_scalar(self, times: float):
+        ax, ay = (times * self.ax, times * self.ay)
+        return ax, ay
 
     def get_components(self):
         return self.ax, self.ay
