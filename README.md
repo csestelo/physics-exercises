@@ -4,17 +4,17 @@ The purpose of the project is implement physics exercises for a better
 understanding of the theory.
 
 
-## WIP
+## Implemented
 
-Implement a vector class which:
+a vector class which:
 
-- [x] has a constructor based in magnitude + angle
-- [x] has a constructor based in components
-- [x] calculates the component in each direction
-- [x] calculates the magnitude
-- [x] calculates the angle with the horizontal
-- [x] calculates the sum of two vectors
-- [ ] calculates the multiplication with a scalar
+- has a constructor based in magnitude + angle
+- has a constructor based in components
+- calculates the component in each direction
+- calculates the magnitude
+- calculates the angle with the horizontal
+- calculates the sum of two vectors
+- calculates the multiplication with a scalar
 
 
 ## future

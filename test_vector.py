@@ -39,3 +39,9 @@ class VectorTests(TestCase):
 
         self.assertEqual(1, vec.ax)
         self.assertEqual(-1, vec.ay)
+
+    def test_multiplication_with_a_scalar(self):
+        vec = Vector.multiplication_with_a_scalar(times=4.0, ax=3.0, ay=-2.0)
+
+        self.assertEqual(12, vec.ax)
+        self.assertEqual(-8, vec.ay)

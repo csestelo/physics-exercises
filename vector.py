@@ -36,6 +36,11 @@ class Vector:
 
         return cls(cx, cy)
 
+    @classmethod
+    def multiplication_with_a_scalar(cls, times: float, ax: float, ay: float):
+        ax, ay = (times * ax, times * ay)
+        return cls(ax, ay)
+
     def get_components(self):
         return self.ax, self.ay
 
