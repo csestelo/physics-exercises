@@ -1,3 +1,4 @@
+from math import sqrt
 from unittest import TestCase
 
 from vector import Vector
@@ -21,3 +22,8 @@ class VectorTests(TestCase):
         magnitude = Vector(ax=3.0, ay=4.0).calculate_magnitude()
 
         self.assertEqual(5, magnitude)
+
+    def test_calculate_correct_horizontal_degree_angle(self):
+        angle = Vector(ax=sqrt(3)/2 * 5, ay=5/2).calculate_horizontal_angle()
+
+        self.assertAlmostEqual(30, angle)

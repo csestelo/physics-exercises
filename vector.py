@@ -1,4 +1,4 @@
-from math import cos, sin, radians, hypot
+from math import cos, sin, radians, hypot, atan2, degrees
 
 from typing import Union
 
@@ -27,3 +27,11 @@ class Vector:
 
     def get_components(self):
         return self.ax, self.ay
+
+    def calculate_horizontal_angle(self):
+        """
+        Calculates the angle, in degrees, for a given vector
+        """
+        radian_angle = atan2(self.ay, self.ax)
+
+        return degrees(radian_angle)
