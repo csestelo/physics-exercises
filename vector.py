@@ -22,11 +22,25 @@ class Vector:
         ay = sin(radians(angle)) * magnitude
         return cls(ax, ay)
 
-    def calculate_magnitude(self) -> Union[int, float]:
-        return hypot(self.ax, self.ay)
+    @classmethod
+    def two_vectors_sum(cls, ax: float, ay: float, bx: float, by: float):
+        cx = ax + bx
+        cy = ay + by
+
+        return cls(cx, cy)
+
+    @classmethod
+    def two_vectors_sub(cls, ax: float, ay: float, bx: float, by: float):
+        cx = ax + -bx
+        cy = ay + -by
+
+        return cls(cx, cy)
 
     def get_components(self):
         return self.ax, self.ay
+
+    def calculate_magnitude(self) -> Union[int, float]:
+        return hypot(self.ax, self.ay)
 
     def calculate_horizontal_angle(self):
         """

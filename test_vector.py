@@ -27,3 +27,15 @@ class VectorTests(TestCase):
         angle = Vector(ax=sqrt(3)/2 * 5, ay=5/2).calculate_horizontal_angle()
 
         self.assertAlmostEqual(30, angle)
+
+    def test_two_vectors_sum(self):
+        vec = Vector.two_vectors_sum(ax=3, ay=2, bx=2, by=3)
+
+        self.assertEqual(5, vec.ax)
+        self.assertEqual(5, vec.ay)
+
+    def test_two_vectors_sub(self):
+        vec = Vector.two_vectors_sub(ax=3, ay=2, bx=2, by=3)
+
+        self.assertEqual(1, vec.ax)
+        self.assertEqual(-1, vec.ay)

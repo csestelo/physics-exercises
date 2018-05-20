@@ -13,7 +13,7 @@ Implement a vector class which:
 - [x] calculates the component in each direction
 - [x] calculates the magnitude
 - [x] calculates the angle with the horizontal
-- [ ] calculates the sum of two vectors
+- [x] calculates the sum of two vectors
 - [ ] calculates the multiplication with a scalar
 
 
